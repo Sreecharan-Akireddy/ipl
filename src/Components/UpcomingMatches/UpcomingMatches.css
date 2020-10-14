@@ -1,0 +1,31 @@
+.card.matches{
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+.btn-primary.card {
+    color: black;
+    align-items: center;
+}
+
+.btn-grad.card {
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%);
+    
+}
+
+ .btn-grad.card:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+.infobox{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 1.2em;
+    background: linear-gradient(to bottom, #669999 0%, #666699 100%);
+    padding: 4px 4px 3px 4px;
+    border-radius: 30%;
+}
+ 

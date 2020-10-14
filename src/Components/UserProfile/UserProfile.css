@@ -1,0 +1,22 @@
+
+.btn-grad {background-image: linear-gradient(to right, #7474BF 0%, #348AC7  51%, #7474BF  100%)}
+
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ .jumbotron{
+     background-color: white;
+     opacity:0.8!important
+ }
+
+ .container.btm-margin{
+     margin-bottom: 30px;
+ }
+    
+ .card.top{
+    width: 18rem;
+ }
