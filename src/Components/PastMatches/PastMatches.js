@@ -26,8 +26,8 @@ class PastMatches extends Component{
                 <h5 className="card-title">{value.day}</h5>
                 <p className="card-text">{value.venue}</p>
                 <div className="btn-group btn-block">
-                        <Button className="btn-grad card">{value.team1}</Button>
-                        <Button className="btn-grad card" disabled>{value.team2}</Button>
+                        <Button className="btn-grad card"> {value.team1 + " ✓"}</Button>
+                        <Button className="btn-grad card">{value.team2}</Button>
                     </div>
                 </div>
                 </div>

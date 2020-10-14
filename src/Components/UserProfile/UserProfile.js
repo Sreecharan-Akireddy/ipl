@@ -5,12 +5,13 @@ import UpcomingMatches from './../UpcomingMatches/UpcomingMatches';
 import PastMatches from './../PastMatches/PastMatches';
 import Revenue from './../Revenue/Revenue';
 import './UserProfile.css';
+import imagePath from './DSC_0691.JPG';
 
 class UserProfile extends Component{
     constructor(props){
         super(props)
         this.state = {
-            "name": "Sreecharan Akireddy",
+            "name": "Sreecharan A",
             "panel": "upcomingMatches"
         }
     }
@@ -47,18 +48,18 @@ class UserProfile extends Component{
                     </div>
         </div>*/}
                 <div className="jumbotron text-center">
-                    <div className="row text-center">
-                        <div className="col-md-4 mb-4">
+                    <div className="row text-left">
+                        <div className="offset-1 col-md-4">
                             <img className="rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" data-holder-rendered="true"></img>
                         </div>
-                        <div className="col-md-8 mb-4">
+                        <div className="col-md-6 mb-4">
                             <h1>{this.state.name}</h1>
                             <h2>Payable Amount: 500</h2>
                             <h2>Team Total: 5600</h2>
                         </div>
                     </div>
                 </div>
-                <div className="btn-group btn-block">
+                <div className="btn-group  btn-block">
                     <Button className="btn-grad" onClick= {() => this.upcomingMatches()}>Upcoming Matches</Button>
                     <Button className="btn-grad" onClick= {() => this.pastMatches()}>Past Matches</Button>
                     <Button className="btn-grad" onClick= {() => this.revenue()}>Revenue</Button>

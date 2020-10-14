@@ -1,4 +1,12 @@
+h1{
+    color: cadetblue;
+    font-weight: 200;
+    margin-top: 6px;
+}
 
+h2{
+    font-weight: 200;
+}
 .btn-grad {background-image: linear-gradient(to right, #7474BF 0%, #348AC7  51%, #7474BF  100%)}
 
 
