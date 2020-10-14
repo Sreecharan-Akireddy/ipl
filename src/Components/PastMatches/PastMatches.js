@@ -6,50 +6,37 @@ import './PastMatches.css'
 class PastMatches extends Component{
     constructor(props){
         super(props)
+        this.state = {"matches":
+        {"49": {"team1": "CSK", "team2": "RR", "venue": "Sharjah", "day": "11th Oct 2020, Sunday", "result": "WON"},
+        "48": {"team1": "RCB", "team2": "SRH", "venue": "Abu dhabi", "day": "10th Oct 2020, Saturday", "result": "LOST"},
+        "47": {"team1": "KKR", "team2": "CSK", "venue": "Dubai", "day": "9th Oct 2020, Friday", "result": "LOST"},
+        "46": {"team1": "KXIP", "team2": "DC", "venue": "Abu dhabi", "day": "8th Oct 2020, Thursday", "result": "WON"},
+        "45": {"team1": "RR", "team2": "KKR", "venue": "Dubai", "day": "7th Oct 2020, Wednesday", "result": "LOST"},
+        "44": {"team1": "CSK", "team2": "KXIP", "venue": "Abu dhabi", "day": "6th Oct 2020, Tuesday", "result": "WON"},
+        "43": {"team1": "RR", "team2": "RCB", "venue": "Sharjah", "day": "5th Oct 2020, Monday", "result": "WON"},
+            }
+        }
     }
     render(){
+        let pastMatchesCards = Object.entries(this.state.matches).map(([matchid, value]) => {
+            return <div className="col-sm-6" key= {matchid}>
+                <div className="card matches">
+                <div className="card-body">
+                <h4>{value.result}</h4>
+                <h5 className="card-title">{value.day}</h5>
+                <p className="card-text">{value.venue}</p>
+                <div className="btn-group btn-block">
+                        <Button className="btn-grad card">{value.team1}</Button>
+                        <Button className="btn-grad card" disabled>{value.team2}</Button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        }
+        )
         return(
         <div class="row">
-            <div class="col-sm-6">
-                <div class="card matches">
-                <div class="card-body">
-                <h4>WON</h4>
-                <h5 class="card-title">11th Oct 2020, Saturday</h5>
-                <p class="card-text">Abu dhabi</p>
-                <div className="btn-group btn-block">
-                        <Button className="btn-grad card" enabled>RR</Button>
-                        <Button className="btn-grad card" disabled>KXIP</Button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card matches">
-                <div class="card-body">
-                <h4>LOST</h4>
-                <h5 class="card-title">10th Oct 2020, Friday</h5>
-                <p class="card-text">Abu dhabi</p>
-                <div className="btn-group btn-block">
-                        <Button className="btn-grad card">KKR</Button>
-                        <Button className="btn-grad card" disabled>RCB</Button>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="card matches">
-                <div class="card-body">
-                <h4>LOST</h4>
-                <h5 class="card-title">9th Oct 2020, Thursday</h5>
-                <p class="card-text">Dubai</p>
-                <div className="btn-group btn-block">
-                        <Button className="btn-grad card" disabled>DC</Button>
-                        <Button className="btn-grad card">CSK</Button>
-                    </div>
-                </div>
-                </div>
-            </div>
+            {pastMatchesCards}
         </div>
         )
     }
