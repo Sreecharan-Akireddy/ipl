@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './UpcomingMatches.css'
+import './UpcomingMatches.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faCheck, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 class UpcomingMatches extends Component{
     constructor(props){
@@ -33,11 +35,27 @@ class UpcomingMatches extends Component{
                 <p className="card-text">{value.venue}</p>
                 <div className="btn-group btn-block">
                         <Button className="btn-match card" onClick={() =>this.selectTeam(matchid, value.team1)}>
-                            {(value.team1 === value.teamSelected) ?  value.team1 + " ✓" : value.team1}
-                            </Button>
+                                {(value.team1 !== value.teamSelected) ? value.team1 :
+                                (<div className="row">
+                                    <div className="col">
+                                        {value.team1}
+                                    </div>
+                                    <div className="col">
+                                        <FontAwesomeIcon icon={faThumbsUp} />
+                                    </div>
+                                </div>)}
+                        </Button>
                         <Button className="btn-match card" onClick={() =>this.selectTeam(matchid, value.team2)}>
-                            {(value.team2 === value.teamSelected) ?  value.team2 + " ✓" : value.team2}
-                            </Button>
+                                {(value.team2 !== value.teamSelected) ? value.team2 :
+                                (<div className="row">
+                                    <div className="col">
+                                        {value.team2}
+                                    </div>
+                                    <div className="col">
+                                        <FontAwesomeIcon icon={faThumbsUp} />
+                                    </div>
+                                </div>)}
+                        </Button>
                     </div>
                 </div>
                 </div>

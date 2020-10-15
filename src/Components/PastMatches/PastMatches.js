@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './PastMatches.css'
+import './PastMatches.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faCheck, faSadCry, faSmile, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 class PastMatches extends Component{
     constructor(props){
@@ -26,8 +28,23 @@ class PastMatches extends Component{
                 <h5 className="card-title">{value.day}</h5>
                 <p className="card-text">{value.venue}</p>
                 <div className="btn-group btn-block">
-                        <Button className="btn-grad card"> {value.team1 + " ✓"}</Button>
-                        <Button className="btn-grad card">{value.team2}</Button>
+                        <Button className="btn-grad card">
+                                <div className="row">
+                                    <div className="col">
+                                        {value.team1}
+                                    </div>
+                                    <div className="col">
+                                        <FontAwesomeIcon icon={faCheck} />
+                                    </div>
+                                </div>
+                        </Button>
+                        <Button className="btn-grad card">
+                               <div className="row">
+                                    <div className="col">
+                                        {value.team2}
+                                    </div>
+                                </div>
+                        </Button>
                     </div>
                 </div>
                 </div>
