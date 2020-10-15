@@ -10,7 +10,7 @@ export default class Revenue extends PureComponent{
     render() {
         const options = {
             animationEnabled: true,
-            animationDuration: 2000,
+            animationDuration: 1200,
             theme: "light1",
             colorSet: "colorSet2",
             zoomEnabled: true,
