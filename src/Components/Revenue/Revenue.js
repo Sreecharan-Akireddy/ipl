@@ -28,8 +28,10 @@ export default class Revenue extends PureComponent{
             },
             data: [{
                 type: "bar",
+                indexLabel: "₹{y}", 
+                indexLabelPlacement: "inside",
                 dataPoints: [
-                    { y:  560, label: "Charan" },
+                    { y:  560, label: "Charan"},
                     { y:  520, label: "Prasad" },
                     { y:  600, label: "Dileep" },
                     { y:  440, label: "Sumana" },
